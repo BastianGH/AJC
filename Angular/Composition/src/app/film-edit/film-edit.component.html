@@ -1,0 +1,52 @@
+<form
+  #editingFilm="ngForm"
+  (ngSubmit)="editFilm(editingFilm)"
+  class="d-flex flex-column"
+>
+  <h2>Editeur de film</h2>
+  <input
+    type="text"
+    name="titre"
+    [(ngModel)]="filmToEdit.titre"
+    class="mb-3 form-control"
+  />
+  <input
+    type="text"
+    name="year"
+    [(ngModel)]="filmToEdit.year"
+    class="mb-3 form-control"
+  />
+  <input
+    type="text"
+    name="genre"
+    [(ngModel)]="filmToEdit.genre"
+    class="mb-3 form-control"
+  />
+  <input
+    type="text"
+    name="img"
+    [(ngModel)]="filmToEdit.img"
+    class="mb-3 form-control"
+  />
+  <input
+    type="text"
+    name="recap"
+    [(ngModel)]="filmToEdit.recap"
+    class="mb-3 form-control"
+  />
+  <input
+    type="text"
+    name="nom"
+    [(ngModel)]="filmToEdit.realisateur.nom"
+    class="mb-3 form-control"
+  />
+  <input
+    type="text"
+    name="prenom"
+    [(ngModel)]="filmToEdit.realisateur.prenom"
+    class="mb-3 form-control"
+  />
+  <button type="submit" class="btn submit-btn btn-primary">
+    Enregistrer les modifications
+  </button>
+</form>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VueJS - Intro</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <h1>VueJS - Intro</h1>
+    <div id="app">
+      <p>{{message}}</p>
+      <p>2+3 = {{addition}}</p>
+      <p>Est ce vrai ? {{isItTrue : 'oui'}}</p>
+      <p>{{array}}</p>
+      <p>{{obj}}</p>
+      <p>{{func}}</p>
+      <p>{{message}}</p>
+      ddddddddddddds
+      <p>{{message}}</p>
+    </div>
+    <script>
+      const { createApp } = Vue;
+
+      createApp({
+        setup() {
+          const message = "coucou";
+          const addition = 2 + 3;
+          const isItTrue = true;
+          const array = ["Chris", "Aymeric", "Océane"];
+          const obj = { car: "fiat 500" };
+          const func = () => {
+            return "je suis une fonction";
+          };
+
+          return { message };
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

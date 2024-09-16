@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ExoDom</title>
+    <style>
+      /* Interdit d'ajouter du style ici */
+      #divTest {
+        width: 300px;
+        height: 300px;
+      }
+      #checkPwdSuccess {
+        color: green;
+      }
+      #checkPwdError {
+        color: red;
+      }
+    </style>
+    <script src="exoDomStarter.js"></script>
+  </head>
+
+  <body>
+    <!-- Interdit de rajouter du HTML ici -->
+    <div id="divTest"></div>
+    <button id="display" onclick="changeVisibilityFunc()">
+      Cache l'élément
+    </button>
+    <br />
+    <h3>- - Bonus - -</h3>
+    Mot de passe : <input type="password" id="pwd" />
+    <br />
+    Verification du mot de passe :
+    <input type="password" id="checkPwd" />
+    <div id="checkPwdSuccess">Mots de passe identiques</div>
+    <div id="checkPwdError">Les mots de passe doivent être identiques</div>
+    <br />
+  </body>
+</html>

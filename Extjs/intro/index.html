@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.2.0/classic/theme-classic/resources/theme-classic-all.css"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.2.0/ext-all.js"
+    ></script>
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html>
+
+<script>
+  Ext.onReady(() => {
+    const panel = Ext.create({
+      xtype: "panel",
+      title: "Panel Title",
+      iconCls: "x-fa fa-html5",
+      height: 400,
+      width: 400,
+      bodyPadding: 12,
+      html: "Sample HTML text",
+      renderTo: "app",
+    });
+
+    console.log(panel);
+
+    Ext.Ajax.request({
+      url: "https://jsonplaceholder.typicode.com/users",
+
+      success: function (response, opts) {
+        var users = Ext.decode(response.responseText);
+        console.dir(users);
+        panel.setTitle(users[0].name);
+      },
+
+      failure: function (response, opts) {
+        console.log("server-side failure with status code " + response.status);
+      },
+    });
+  });
+</script>

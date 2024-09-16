@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vuejs - Intro</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <h1>Vuejs - Intro</h1>
+    <div id="app">
+      <p>{{ message() }}</p>
+    </div>
+    <script>
+      const { createApp } = Vue;
+      createApp({
+        setup() {
+          const array = ["Chris", "Aymeric", "Océane"];
+          const isItTrue = true;
+          const obj = { car: "Fiat 500" };
+
+          function message() {
+            const randName = array[Math.floor(Math.random() * array.length)];
+            if (isItTrue) return `Mon nom est ${randName}`;
+            return obj.car;
+          }
+
+          return {
+            message,
+          };
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

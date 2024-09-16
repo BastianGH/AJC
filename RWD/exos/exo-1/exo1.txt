@@ -1,0 +1,3 @@
+*** EXO 1 ***
+Le css en vigueur sur le fichier index.html propose une version mobile du layout.
+En vous inspirant du fichier rwd-desktop.png, proposez une version desktop de ce même layout.

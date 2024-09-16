@@ -1,0 +1,10 @@
+h2 {
+  color: var(--text-main-color);
+}
+
+.containerFilms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+}

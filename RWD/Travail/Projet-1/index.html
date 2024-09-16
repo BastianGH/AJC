@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projet 1</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      var showWidth = 1;
+
+      if (showWidth == 1) {
+        $(document).ready(() => {
+          $(window).resize(() => {
+            var width = $(window).width();
+            $("#output_width").html("Window width: " + width.toString());
+          });
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div id="output_width"></div>
+    <div id="container">
+      <header class="main-header">
+        <img src="imgs/logo.png" alt="Projet 1" id="logo" />
+        <nav class="main-nav">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#">Learn</a></li>
+            <li><a href="#">Brainstorm</a></li>
+            <li><a href="#">Create</a></li>
+            <li><a href="#">Collaborate</a></li>
+            <li><a href="#">Teach</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div id="main">
+        <div id="content">
+          <article class="artl">
+            <header class="art-header">
+              <h2 class="title"><a href="#">First Post</a></h2>
+              <span>Created By Chris on July 3rd, 2024</span>
+            </header>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Doloremque, ullam quibusdam. Nemo dolore, eum optio quibusdam
+              dolor distinctio, magni odio suscipit molestiae eos quia
+              blanditiis perferendis fugiat quasi, tempora nesciunt.
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis
+              facere tempore cumque est cupiditate minima deserunt dignissimos
+              neque hic magnam? Earum expedita maiores deleniti aspernatur sequi
+              reiciendis illum quos quae.
+            </p>
+            <a href="#" class="readmore">Read more</a>
+          </article>
+          <article class="art2">
+            <header class="art-header">
+              <h2 class="title"><a href="#">Second Post</a></h2>
+              <span>Created By Chris on July 3rd, 2024</span>
+            </header>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Doloremque, ullam quibusdam. Nemo dolore, eum optio quibusdam
+              dolor distinctio, magni odio suscipit molestiae eos quia
+              blanditiis perferendis fugiat quasi, tempora nesciunt.
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis
+              facere tempore cumque est cupiditate minima deserunt dignissimos
+              neque hic magnam? Earum expedita maiores deleniti aspernatur sequi
+              reiciendis illum quos quae.
+            </p>
+            <a href="#" class="readmore">Read more</a>
+          </article>
+        </div>
+        <aside id="sidebar">
+          <div class="block">
+            <h2>Top Sidebar</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+              quae molestias corrupti quos adipisci provident asperiores placeat
+              nesciunt, corporis eos quo hic veritatis praesentium, sit maxime
+              rerum quis quasi officia.
+            </p>
+          </div>
+          <div class="block">
+            <h2>Mid Sidebar</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+              quae molestias corrupti quos adipisci provident asperiores placeat
+              nesciunt, corporis eos quo hic veritatis praesentium, sit maxime
+              rerum quis quasi officia.
+            </p>
+          </div>
+          <div class="block">
+            <h2>Bottom Sidebar</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+              quae molestias corrupti quos adipisci provident asperiores placeat
+              nesciunt, corporis eos quo hic veritatis praesentium, sit maxime
+              rerum quis quasi officia.
+            </p>
+          </div>
+        </aside>
+      </div>
+      <div class="clr"></div>
+      <footer>
+        <p>Copyright &copy 2024 Projet 1</p>
+      </footer>
+    </div>
+  </body>
+</html>

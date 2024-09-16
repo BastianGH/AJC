@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>Infos bancaires</title>
+</head>
+<body>
+    <h1>Veuillez renseigner les informations</h1>
+    <!-- 'onsubmit' pour créer une fonction qui sera appelé quand on essaiera de soumettre le formulaire
+      appeler la fonction ici permet de lier un parametre event essentiel à l'évitement du comportement par défaut
+      qui réinitialise les champs et actualise la page toute seule-->
+    <form action="" onsubmit="showData(event)">
+        <div id="bancaire">
+            <h2>Code bancaire</h2>
+            <input type="number">
+            <input type="number">
+            <input type="number">
+            <input type="number">
+        </div>
+        <div>
+            <h2>Date d'expiration</h2>
+            <input type="number">
+            <input type="number">
+        </div>
+        <div>
+            <h2>Code secret</h2>
+            <input type="password">
+        </div>
+        <div>
+            <button type="submit">Envoyer le formulaire</button>
+            <button type="reset">Réinitisaliser le formulaire</button>
+        </div>
+    </form>
+</body>
+</html>

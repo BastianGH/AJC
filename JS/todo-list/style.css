@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    padding: 0;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vw;
+    background-color: rgb(240,255,255);
+}
+
+.container{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+h1{
+    margin: auto;
+    padding: 1.5em 0;
+}
+
+.fonctions{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#ajoutlist{
+    position: absolute;
+    margin: auto;
+    border: 1pt solid black;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.4);
+
+}
+
+label{
+    padding: .2em 0;
+}
+
+.add{
+    margin: .5em 0;
+}
+
+input#description{
+    height: 2em;
+
+}
+
+button{
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#ajoutlist form{
+    display: grid;
+    padding: 15px;
+}
+
+#todolist{
+    margin: 0 2em;
+    padding: 1.5em 0;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 100vw;
+}
+
+#todolist div{
+    line-height: 26px;
+    border: 1pt solid black;
+    border-radius: 15px;
+    width: 200px; 
+    padding: 2%;
+    text-align: center;
+    z-index: 0;
+    background-color: rgb(230,255,255);
+    -webkit-box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.4);
+    transition: width height margin .5s;
+}
+
+.todoItemTitre{
+    text-align: center;
+    font-weight: bold;
+}
+
+.todoItemDescription{
+    text-align: center;
+}
+
+#todolist .biggerBox {
+    width: 50%;
+    height: 500px;
+    position: absolute;
+    margin: 0% 25%;
+    z-index: 1;
+    transition: width height margin, .5s;
+}
+
+.EditButton{
+    display:none;
+}
+
+.biggerBox > .EditButton{
+    display:inline;
+}
+
+
+#todolist .late{
+    background-color: red;
+}
+
+#todolist .completed{
+    background-color: green;
+}

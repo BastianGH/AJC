@@ -1,0 +1,22 @@
+QCM - RWD
+
+Question 1 => B,C,D
+Question 2 => A
+Question 3 => B,C
+Question 4 => C
+Question 5 => A,C,D,F
+Question 6 => B
+Question 7 => A
+Question 8 => A,E,F
+Question 9 => B
+Question 10 => B,C
+Question 11 => C
+Question 12 => A
+Question 13 => B
+Question 14 => C
+Question 15 => A,D
+Question 16 => A
+Question 17 => C
+Question 18 => B
+Question 19 => C
+Question 20 => A,C

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calendrier Statique</title>
+</head>
+<body>
+    <Header>
+        <h1>Juin 2024</h1>
+    </Header>
+    <Main>
+        <div class="option-container">
+            <div class="button-container">
+                <button> < </button>
+                <button> > </button>
+            </div>
+            <select name="" id="mois">
+                <option value="avril-2024">Avril 2024</option>
+                <option value="mai-2024">Mai 2024</option>
+                <option value="juin-2024" selected>Juin 2024</option>            
+                <option value="juillet-2024">Juillet 2024</option>
+                <option value="aout-2024">Aout 2024</option>
+                <option value="septembre-2024">Septembre 2024</option>
+                <option value="octobre-2024">Octobre 2024</option>
+                <option value="novembre-2024">Novembre 2024</option>
+                <option value="decembre-2024">Décembre 2024</option>
+                <option value="janvier-2025">Janvier 2025</option>
+                <option value="fevrier-2025">Février 2025</option>
+                <option value="mars-2025">Mars 2025</option>
+            </select>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>L</th>
+                    <th>M</th>
+                    <th>M</th>
+                    <th>J</th>
+                    <th>V</th>
+                    <th>S</th>
+                    <th>D</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>29</td>
+                    <td>30</td>
+                    <td>31</td>
+                    <td>1</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td id="today">21</td>
+                    <td>22</td>
+                    <td>23</td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td id="event">28</td>
+                    <td>29</td>
+                    <td>30</td>
+                </tr>
+            </tbody>
+        </table> 
+    </Main>
+</body>
+</html>

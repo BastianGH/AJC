@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vuejs - Intro</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <h1>Vuejs - Intro</h1>
+    <div id="app">
+      <p v-if="user.age >= 18">Tu as l'âge requis</p>
+      <p v-else-if="checkUser()">Sois le bienvenu Chris !</p>
+      <p v-else>Tu n'as pas l'âge, tu n'es pas Chris</p>
+      <p v-show="true">Paragraphe affiché</p>
+      <p v-show="false">Paragraphe masqué</p>
+    </div>
+    <script>
+      const { createApp } = Vue;
+      createApp({
+        setup() {
+          const user = {
+            name: "Chris",
+            age: 15,
+          };
+
+          function checkUser() {
+            return user.name === "Chris";
+          }
+
+          return { user, checkUser };
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

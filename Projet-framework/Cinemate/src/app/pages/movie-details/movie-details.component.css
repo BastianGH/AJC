@@ -1,0 +1,21 @@
+.col {
+  color: var(--text-main-color);
+}
+.vote {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.vote svg {
+  width: 20px;
+  fill: #facc15;
+}
+
+.vote .dot {
+  display: block;
+  width: 0.25rem;
+  height: 0.25rem;
+  border-radius: 50%;
+  background-color: var(--text-main-color);
+}

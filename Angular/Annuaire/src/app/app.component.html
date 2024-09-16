@@ -1,0 +1,94 @@
+<header
+  class="bg-primary py-2 px-3 d-flex justify-content-between align-items-center"
+>
+  <h1>{{ title }}</h1>
+  <button
+    class="rounded-5 btn btn-info text-tertiary py-1 px-4"
+    (click)="displayForm()"
+  >
+    Ajouter un contact +
+  </button>
+</header>
+<main class="py-2 px-3 container">
+  <div class="row gap-5">
+    <table class="table table-striped col">
+      <thead>
+        <tr class="text-capitalize table-secondary">
+          <th>nom</th>
+          <th>prenom</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let personne of personnes">
+          <td (click)="displayInfos(personne)">{{ personne.nom }}</td>
+          <td (click)="displayInfos(personne)">{{ personne.prenom }}</td>
+          <td class="text-danger">
+            <fa-icon
+              [icon]="faTrash"
+              (click)="removePersonne(personne)"
+            ></fa-icon>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="col">
+      <form
+        #addContactForm="ngForm"
+        (ngSubmit)="createContact(addContactForm)"
+        *ngIf="displayAddContact"
+        class="d-flex flex-column mb-5"
+      >
+        <h4 class="mb-3">Nouveau contact</h4>
+
+        <input
+          type="text"
+          name="nom"
+          [(ngModel)]="newContact.nom"
+          class="mb-3 form-control"
+          placeholder="nom"
+        />
+        <input
+          type="text"
+          name="prenom"
+          [(ngModel)]="newContact.prenom"
+          class="mb-3 form-control"
+          placeholder="prénom"
+        />
+        <input
+          type="mail"
+          name="email"
+          [(ngModel)]="newContact.email"
+          class="mb-3 form-control"
+          placeholder="email"
+        />
+        <input
+          type="date"
+          name="dateNaissance"
+          [(ngModel)]="newContact.dateNaissance"
+          class="mb-3 form-control"
+        />
+        <button type="submit" class="btn submit-btn btn-primary">
+          Créer un nouveau contact
+        </button>
+      </form>
+      <div
+        id="détail"
+        *ngIf="displayContactInfos"
+        class="d-flex flex-column gap-3 mb-5"
+      >
+        <h4>Détails du contact</h4>
+        <div class="d-flex gap-5">
+          <span>Nom : {{ infoContact.nom }}</span>
+          <span>Prenom : {{ infoContact.prenom }}</span>
+        </div>
+        <div>
+          Date de naissance :
+          {{ infoContact.dateNaissance | date : "dd MMMM YYYY" }}
+        </div>
+        <div>Email : {{ infoContact.email }}</div>
+        <button (click)="close()" class="btn btn-primary">Fermer</button>
+      </div>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,21 @@
+.film-card {
+  width: 24rem;
+  border: 1px solid var(--border);
+  height: 100%;
+}
+
+.film-card img {
+  width: 100%;
+}
+
+.film-card {
+  background-color: var(--container-bg);
+}
+
+.film-card figcaption > h2 {
+  color: var(--text-main-color);
+}
+
+.film-card figcaption > p {
+  color: var(--text-secondary-color);
+}

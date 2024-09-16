@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vuejs - Intro</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <h1>Vuejs - Intro</h1>
+
+    <div id="app">
+      <p>{{ message }}</p>
+      <p>2+3 = {{ addition }}</p>
+      <p>Est-ce vrai ? {{ isItTrue ? 'oui' : 'non' }}</p>
+      <p>{{ array[0] }}, {{ array[2] }}</p>
+      <p>{{ obj.car }}</p>
+      <p>{{ func() }}</p>
+      <p>{{ date }}</p>
+    </div>
+
+    <script>
+      const { createApp } = Vue;
+
+      createApp({
+        setup() {
+          const message = "Coucou";
+          const addition = 2 + 3;
+          const isItTrue = true;
+          const array = ["Chris", "Aymeric", "Océane"];
+          const obj = { car: "Fiat 500" };
+          const func = () => "Je suis une fonction";
+          const date = new Date().toLocaleString();
+
+          return {
+            message,
+            addition,
+            isItTrue,
+            array,
+            obj,
+            func,
+            date,
+          };
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE personnes
+[
+    <!-- Définition des balises -->
+<!ELEMENT personnes (personne)+>
+<!ELEMENT personne (nom, prenom+, age, mail*, telephones+)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT prenom (#PCDATA)>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT mail (#PCDATA)>
+<!ELEMENT telephone (#PCDATA)>
+
+<!-- Définition des attributs -->
+<!ATTLIST personne id ID #REQUIRED>
+<!ATTLIST mail type NMTOKEN #IMPLIED>
+<!ATTLIST telephone type (pro | perso | fixe) #REQUIRED>
+
+]>
+<personnes>
+<personne identifiant="1">
+<nom>Guarin</nom>
+<prenom>Guillaume</prenom>
+<age>43</age>
+<mail type="pro">guillaume@guarin.fr</mail>
+<telephone type="fixe">0366666666</telephone>
+<telephone type="pro">0666666666</telephone>
+</personne>
+<personne identifiant="2">
+<nom>Jolibois</nom>
+<prenom>Julien</prenom>
+<age>23</age>
+<mail type="yahoo">jolibois@yahoo.fr</mail>
+<telephone type="perso">0366666666</telephone>
+</personne>
+<personne identifiant="3">
+<nom>Dupont</nom>
+<prenom>Fabien</prenom>
+<prenom>Damien</prenom>
+<age>35</age>
+<telephone type="fixe">0366666666</telephone>
+<telephone type="pro">0666666666</telephone>
+</personne>
+</personnes>

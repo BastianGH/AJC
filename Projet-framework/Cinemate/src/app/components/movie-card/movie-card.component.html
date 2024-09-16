@@ -1,0 +1,25 @@
+<div class="film-card rounded-3">
+  <a
+    [routerLink]="['/movie', film.id]"
+    class="link-light link-offset-2 link-underline link-underline-opacity-0"
+  >
+    <figure>
+      <img
+        *ngIf="!backup"
+        [src]="'https://image.tmdb.org/t/p/w300/' + film.poster_path"
+        [alt]="film.original_title"
+        class="rounded-top-3"
+      />
+      <img
+        *ngIf="backup"
+        [src]="this.backup"
+        alt="no image found"
+        class="rounded-top-3"
+      />
+      <figcaption class="pt-4 pb-1 px-4">
+        <h2>{{ film.original_title }}</h2>
+        <p>{{ film.overview }}</p>
+      </figcaption>
+    </figure>
+  </a>
+</div>

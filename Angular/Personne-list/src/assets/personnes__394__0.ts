@@ -1,0 +1,192 @@
+export type Personne = {
+  id: number;
+  prenom: string;
+  nom: string;
+  email: string;
+  dateNaissance: Date;
+};
+
+export const personnes: Personne[] = [
+  {
+    id: 1,
+    prenom: 'Colman',
+    nom: 'Mularkey',
+    email: 'cmularkey0@github.io',
+    dateNaissance: new Date(1961, 0, 21),
+  },
+  {
+    id: 2,
+    prenom: 'Jackqueline',
+    nom: 'Haggett',
+    email: 'jhaggett1@nytimes.com',
+    dateNaissance: new Date(1985, 10, 13),
+  },
+  {
+    id: 3,
+    prenom: 'Wyndham',
+    nom: 'Pope',
+    email: 'wpope2@taobao.com',
+    dateNaissance: new Date(2023, 10, 8),
+  },
+  {
+    id: 4,
+    prenom: 'Blanca',
+    nom: 'Ogus',
+    email: 'bogus3@free.fr',
+    dateNaissance: new Date(1958, 10, 26),
+  },
+  {
+    id: 5,
+    prenom: 'Ethyl',
+    nom: 'Hyams',
+    email: 'ehyams4@nationalgeographic.com',
+    dateNaissance: new Date(1971, 5, 2),
+  },
+  {
+    id: 6,
+    prenom: 'Tod',
+    nom: 'Oade',
+    email: 'toade5@odnoklassniki.ru',
+    dateNaissance: new Date(1967, 11, 12),
+  },
+  {
+    id: 7,
+    prenom: 'Aloysia',
+    nom: 'Gayle',
+    email: 'agayle6@netvibes.com',
+    dateNaissance: new Date(1960, 6, 1),
+  },
+  {
+    id: 8,
+    prenom: 'Cyb',
+    nom: 'Sutherland',
+    email: 'csutherland7@mail.ru',
+    dateNaissance: new Date(1989, 4, 12),
+  },
+  {
+    id: 9,
+    prenom: 'Jermayne',
+    nom: 'Gibbings',
+    email: 'jgibbings8@ning.com',
+    dateNaissance: new Date(1964, 0, 13),
+  },
+  {
+    id: 10,
+    prenom: 'Gert',
+    nom: 'Tremmil',
+    email: 'gtremmil9@yahoo.com',
+    dateNaissance: new Date(1967, 0, 10),
+  },
+  {
+    id: 11,
+    prenom: 'Linet',
+    nom: 'Stuck',
+    email: 'lstucka@dot.gov',
+    dateNaissance: new Date(1975, 0, 30),
+  },
+  {
+    id: 12,
+    prenom: 'Allistir',
+    nom: 'Bedrosian',
+    email: 'abedrosianb@gmpg.org',
+    dateNaissance: new Date(1979, 8, 16),
+  },
+  {
+    id: 13,
+    prenom: 'Deana',
+    nom: 'Gethins',
+    email: 'dgethinsc@unc.edu',
+    dateNaissance: new Date(1966, 3, 25),
+  },
+  {
+    id: 14,
+    prenom: 'Tess',
+    nom: 'Houltham',
+    email: 'thoulthamd@wisc.edu',
+    dateNaissance: new Date(1983, 8, 19),
+  },
+  {
+    id: 15,
+    prenom: 'Tommie',
+    nom: 'Kelloch',
+    email: 'tkelloche@epa.gov',
+    dateNaissance: new Date(1993, 6, 15),
+  },
+  {
+    id: 16,
+    prenom: 'Tabby',
+    nom: 'Screach',
+    email: 'tscreachf@topsy.com',
+    dateNaissance: new Date(1966, 10, 12),
+  },
+  {
+    id: 17,
+    prenom: 'Cedric',
+    nom: 'Lunny',
+    email: 'clunnyg@jalbum.net',
+    dateNaissance: new Date(1986, 7, 31),
+  },
+  {
+    id: 18,
+    prenom: 'Lindsey',
+    nom: 'Dean',
+    email: 'ldeanh@issuu.com',
+    dateNaissance: new Date(1982, 3, 14),
+  },
+  {
+    id: 19,
+    prenom: 'Roddie',
+    nom: 'Simeonov',
+    email: 'rsimeonovi@blogs.com',
+    dateNaissance: new Date(1955, 4, 21),
+  },
+  {
+    id: 20,
+    prenom: 'Ingemar',
+    nom: 'Arnason',
+    email: 'iarnasonj@ebay.com',
+    dateNaissance: new Date(2001, 3, 3),
+  },
+  {
+    id: 21,
+    prenom: 'Maurise',
+    nom: 'Meachem',
+    email: 'mmeachemk@goo.gl',
+    dateNaissance: new Date(1959, 3, 8),
+  },
+  {
+    id: 22,
+    prenom: 'Margie',
+    nom: 'Pisco',
+    email: 'mpiscol@ted.com',
+    dateNaissance: new Date(1990, new Date().getMonth(), new Date().getDate()), // C'est son anniversaire
+  },
+  {
+    id: 23,
+    prenom: 'Missy',
+    nom: 'McCue',
+    email: 'mmccuem@feedburner.com',
+    dateNaissance: new Date(1973, 10, 9),
+  },
+  {
+    id: 24,
+    prenom: 'Anastassia',
+    nom: 'Smy',
+    email: 'asmyn@flickr.com',
+    dateNaissance: new Date(1950, 9, 7),
+  },
+  {
+    id: 25,
+    prenom: 'Celle',
+    nom: 'Coston',
+    email: 'ccostono@nationalgeographic.com',
+    dateNaissance: new Date(1999, 6, 29),
+  },
+  {
+    id: 26,
+    prenom: 'Bastian',
+    nom: 'Dubstep',
+    email: 'bastiandubstep@gmail.com',
+    dateNaissance: new Date(2024, 6, 15),
+  },
+];

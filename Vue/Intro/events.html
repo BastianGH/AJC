@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vuejs - Intro</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+      .box {
+        background: red;
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Vuejs - Intro</h1>
+    <div id="app">
+      <h2>{{ name }}</h2>
+      <div v-on:dblclick="updateName">Click me !</div>
+      <hr />
+      <div class="box" v-on:mouseover="getCoord">Hover me !</div>
+      <p>x: {{ coord.x }}</p>
+      <p>y: {{ coord.y }}</p>
+    </div>
+    <script>
+      const { createApp, ref, reactive } = Vue;
+      createApp({
+        setup() {
+          const name = ref("Chris");
+          const coord = ref({ x: 0, y: 0 });
+
+          function updateName() {
+            name.value = "Aymeric";
+          }
+
+          function getCoord(event) {
+            coord.value.x = event.clientX;
+            coord.value.y = event.clientY;
+          }
+
+          return { name, updateName, coord, getCoord };
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

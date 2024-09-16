@@ -1,0 +1,26 @@
+// /* Pour utiliser les éléments du Slice dans le composant :
+
+// // en lecture :
+// import { useSelector } from 'react-redux'
+// puis avant le return :
+// const cartList = useSelector(state => state.xxxState.cartList);
+// enfin dans le return on bind de cette façon :
+// {cartList.length} par exemple pour avoir la taille du tableau
+
+// // en écriture :
+// import { useDispatch, useSelector } from 'react-redux'
+// import { add, remove } from '../store/xxxSlice'
+
+// puis avant le return :
+// const dispatch = useDispatch();
+// const cartList = useSelector(state => state.xxxState.cartList);
+
+// ensuite dans une fonction (liée à un écouteur d'évènement click sur un bouton par exemple)>
+// <button onClick={() => dispatch(add(données))}  // pour ajouter un élément
+// <button onClick={() => dispatch(remove(données))}  // pour supprimer un élément
+
+// Si un composant a besoin d'agir sur plusieurs slices, bien définir des noms d'actions précis dans chaque slice 
+// exemple : addCart, addProduct, addUser, etc au lieu de seulement add
+
+// */
+

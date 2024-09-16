@@ -1,0 +1,129 @@
+:root{
+    --gris:slategray;
+    --gris-noir:darkslategrey;
+    --bleu:cadetblue;
+    --lavande: lavender;
+    --couleur-mysterieuse: #538a8c; /*(couleur hexadécimal)*/
+    --border-input: 10px;
+    --border-button: 20px;
+}
+
+* {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body, h1, h2 {
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    color: white;
+    background-color: var(--gris-noir);
+}
+
+h1 {
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+main > * {
+    width: 50%;
+}
+
+.img {
+    background: no-repeat url("Eucalyptus-tree__394__0.jpg") bottom;
+}
+
+.formulaire, .connection, .inscription {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: lavender;
+    
+}
+
+.formulaire {
+    gap: 25px;
+}
+
+.connection, .inscription {
+    gap: 10px;
+    width: 35%;
+    opacity: 0.5;
+}
+
+.connection:hover, .inscription:hover {
+    opacity: 1;
+}
+
+.formulaire-champ{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input{
+    padding: 5px 15px 10px;
+    border-radius: var(--border-input);
+    color: darkslategray;
+    background-color: lavender;
+    border: 1px solid black;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+input:focus {
+    outline: none;
+}
+
+button{
+    width: 100%;
+    padding: 7px 0 13px;
+    color: lavender;
+    background-color: var(--bleu);
+    border: 0;
+    border-radius: var(--border-button);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: var(--couleur-mysterieuse);
+    box-shadow:gray 0px 0px 10px 0px;
+}
+
+.separation{
+    width: 80%;
+    border: none;
+    border-top: 1px solid grey;
+    color: grey;
+    overflow: visible;
+    text-align: center;
+    width: 60%;
+    height: 0px;
+}
+
+.separation::after {
+    content: 'OU';
+    background-color: lavender;
+    padding: 0 20px;
+    position: relative;
+    top: -13px;
+}
+
+
+

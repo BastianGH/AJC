@@ -1,0 +1,16 @@
+<div (click)="selectFilm()">
+  <figure class="d-flex gap-2">
+    <img [src]="film.img" [alt]="film.titre" class="img-fluid col-md-5" />
+    <figcaption>
+      <h2>{{ film.titre }} - {{ film.year }}</h2>
+      <div>{{ film.realisateur.prenom }} {{ film.realisateur.nom }}</div>
+    </figcaption>
+  </figure>
+  <div>
+    <p>{{ film.recap }}</p>
+    <div>
+      <span>{{ film.genre }}</span>
+    </div>
+    <div>{{ film.duree }}</div>
+  </div>
+</div>

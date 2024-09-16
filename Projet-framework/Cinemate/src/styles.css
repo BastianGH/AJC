@@ -1,0 +1,25 @@
+:root {
+  --header-bg: #111827;
+  --container-bg: #1e293b;
+  --text-main-color: white;
+  --text-secondary-color: #9ca3af;
+  --svg-color: #9ca3af;
+  --svg-color-bg: #1f2937;
+  --svg-color-border: #4b5563;
+  --border: #111827;
+  --border-footer: "";
+  --input-bg: #4b5563;
+}
+
+.day-mode {
+  --header-bg: #fff;
+  --container-bg: #fff;
+  --text-main-color: black;
+  --text-secondary-color: #374151;
+  --svg-color: #9ca3af;
+  --svg-color-bg: #fff;
+  --svg-color-border: #e5e7eb;
+  --border: #e5e7eb;
+  --border-footer: #e5e7eb;
+  --input-bg: #fff;
+}

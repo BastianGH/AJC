@@ -1,0 +1,14 @@
+footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  font-size: smaller;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid var(--border-footer);
+}
+
+footer ul {
+  margin: 0;
+}

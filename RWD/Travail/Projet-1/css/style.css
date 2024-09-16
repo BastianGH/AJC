@@ -1,0 +1,288 @@
+body {
+  margin: 0;
+  background: #ececec url("../imgs/sos.png") repeat;
+  font-size: 87.5%;
+  font-family: "Open Sans", sans-serif;
+  color: #666;
+  line-height: 1.7em;
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+  color: #781a26;
+}
+
+h2 {
+  color: #781a26;
+}
+
+a:hover {
+  color: #666;
+}
+
+#container {
+  margin: 0 auto;
+  container: block;
+  width: 80%;
+}
+
+.main-header {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.main-header img#logo {
+  width: 45%;
+  margin: 10px 0;
+  display: block;
+  transition: width 2s;
+}
+
+.main-header .main-nav {
+  background: #882433;
+  height: 40px;
+  border-radius: 5px;
+  border: #c13046 1px solid;
+}
+
+.main-header .main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-header .main-nav li {
+  float: left;
+  display: inline;
+  margin-right: 3px;
+}
+
+.main-header .main-nav li a {
+  color: white;
+  display: inline-block;
+  padding: 10px 20px;
+  height: 20px;
+}
+
+.main-header .main-nav li a:hover,
+.main-header .main-nav li a.active {
+  color: #781a26;
+  background: #efeadd;
+  border-radius: 5px;
+}
+
+#content {
+  width: 70%;
+  float: left;
+  transition: width 2s;
+}
+
+#content article {
+  border-radius: 5px;
+  background: #fff;
+  padding: 10px 15px;
+  margin-top: 10px;
+  overflow: auto;
+}
+
+#content article span {
+  color: #000;
+  font-style: italic;
+}
+
+#content a.readmore {
+  display: block;
+  float: right;
+  color: #fff;
+  border-radius: 5px;
+  background: #c13046;
+  padding: 5px 9px;
+}
+
+#content a.readmore:hover {
+  background: #000;
+}
+
+#sidebar {
+  width: 30%;
+  float: left;
+}
+
+#sidebar .block {
+  border-radius: 5px;
+  background: #fff;
+  margin: 10px 0 0 10px;
+  padding: 10px 15px;
+  transition: margin 4s;
+}
+
+.clr {
+  clear: both;
+}
+
+footer {
+  background: #882433;
+  height: 40px;
+  border: #c13046 1px solid;
+  border-radius: 5px;
+}
+
+/* Starts Media Queries */
+
+/* iPads */
+@media only screen and (min-width: 769px) and (max-width: 980px) {
+  #container {
+    width: 95%;
+  }
+
+  .main-header img#logo {
+    margin: auto;
+    display: block;
+    width: 65%;
+  }
+
+  .main-header .main-nav {
+    background: #882433;
+    height: 40px;
+    border-radius: 5px;
+    border: #c13046 1px solid;
+    transition: height 1s;
+  }
+
+  #content {
+    width: 100%;
+    float: none;
+    overflow: auto;
+    transition: width 1s;
+  }
+
+  #sidebar {
+    width: 100%;
+    float: none;
+  }
+
+  #sidebar .block {
+    margin-left: 0;
+  }
+}
+
+/* Small Tablets */
+@media screen and (min-width: 569px) and (max-width: 768px) {
+  #container {
+    width: 95%;
+  }
+
+  .main-header img#logo {
+    margin: auto;
+    display: block;
+    width: 95%;
+  }
+
+  .main-header .main-nav {
+    height: auto;
+    border-radius: 5px;
+    border: #c13046 1px solid;
+    display: block;
+    width: 99%;
+    overflow: hidden;
+  }
+
+  .main-header .main-nav ul {
+    padding: 2% 1%;
+    text-align: center;
+    width: 98%;
+  }
+
+  .main-header .main-nav li {
+    float: none;
+    display: block;
+    margin-right: 0;
+    width: 100%;
+    border-bottom: #a3293b 1px solid;
+  }
+
+  .main-header .main-nav a {
+    margin-bottom: 2px;
+  }
+
+  .main-header .main-nav li a:hover,
+  .main-header .main-nav li a.active {
+    display: block;
+  }
+
+  #sidebar {
+    width: 100%;
+    float: none;
+  }
+
+  #sidebar .block {
+    margin-left: 0;
+  }
+}
+
+/* Smartphones */
+@media screen and (min-width: 240px) and (max-width: 568px) {
+  #container {
+    width: 95%;
+  }
+
+  .main-header img#logo {
+    margin: auto;
+    display: block;
+    width: 95%;
+  }
+
+  .main-header .main-nav {
+    height: auto;
+    border-radius: 5px;
+    border: #c13046 1px solid;
+    display: block;
+    width: 99%;
+    overflow: hidden;
+  }
+
+  .main-header .main-nav ul {
+    padding: 2% 1%;
+    text-align: center;
+    width: 98%;
+  }
+
+  .main-header .main-nav li {
+    float: none;
+    display: block;
+    margin-right: 0;
+    width: 100%;
+    border-bottom: #a3293b 1px solid;
+  }
+
+  .main-header .main-nav a {
+    margin-bottom: 2px;
+  }
+
+  .main-header .main-nav li a:hover,
+  .main-header .main-nav li a.active {
+    display: block;
+  }
+
+  #content {
+    width: 100%;
+    float: none;
+    overflow: auto;
+  }
+  #content a.readmore {
+    display: block;
+    float: none;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  #sidebar {
+    width: 100%;
+    float: none;
+  }
+
+  #sidebar .block {
+    margin-left: 0;
+  }
+}

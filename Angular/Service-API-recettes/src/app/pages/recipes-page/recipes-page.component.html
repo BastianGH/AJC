@@ -1,0 +1,50 @@
+<div class="text-center" *ngIf="loading">
+  <div class="spinner-border text-dark" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>
+<!-- Affichage des recettes -->
+<div class="container">
+  <div class="row justify-content-between" *ngIf="!loading">
+    <div
+      class="card w-96 shadow-xl cursor-pointer col-3 mx-1 my-5"
+      *ngFor="let r of recipes"
+    >
+      <div class="card-body d-flex flex-column justify-content-between">
+        <figure class="d-flex flex-column gap-2">
+          <img
+            [src]="r.image"
+            [alt]="r.name"
+            class="img-fluid rounded-lg rounded-5 w-100"
+          />
+          <h2 class="card-title m-0">{{ r.name }}</h2>
+          <div class="fw-bolder">
+            {{ r.difficulty }}
+          </div>
+        </figure>
+
+        <button
+          class="btn rounded-5 btn-primary"
+          [routerLink]="['/recipes', r.id]"
+        >
+          Details
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--<div class="grid grid-cols-3 gap-3">
+  <app-recipe-info-page
+    *ngFor="let recipe of recipes"
+    (select)="select(recipe)"
+    [selected]="recipe == selected"
+  ></app-recipe-info-page>
+</div>-->
+<!-- Formulaire d'edition -->
+
+<!-- (alias) type Recipe = {
+    id: number;
+    name: string;
+    difficulty: string;
+    image -->

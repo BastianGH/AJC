@@ -1,0 +1,154 @@
+#menuPc {
+  width: 100%;
+  display: flex;
+  /* display: none; */
+  justify-content: space-between;
+}
+
+#menuBurger {
+  display: none;
+}
+
+h1 {
+  color: var(--text-main-color);
+  margin: 0;
+}
+
+header {
+  background-color: var(--header-bg);
+  border-bottom: 1px solid var(--border);
+}
+
+header img {
+  width: 50px;
+}
+
+.listHeader {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  gap: 1em;
+  margin: 0;
+}
+
+.listHeader a {
+  color: var(--text-secondary-color);
+}
+
+.listHeader a:hover {
+  color: var(--text-main-color);
+}
+
+.listHeader .active {
+  color: var(--text-main-color);
+}
+
+.btn-clarity button {
+  width: 30px;
+  height: 30px;
+  padding: 7px;
+  background-color: var(--svg-color-bg);
+  border: 1px solid var(--svg-color-border);
+}
+
+.btn-clarity svg {
+  display: block;
+  fill: var(--svg-color);
+}
+
+.btn-clarity button:hover {
+  background-color: var(--svg-color-border);
+}
+
+.searchBar {
+  position: relative;
+}
+
+.searchBar .img {
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  width: 22px;
+  height: 22px;
+  z-index: 999;
+}
+
+.searchBar .img path {
+  fill: #aaa;
+}
+
+.searchBar input[type="text"] {
+  padding-left: 40px;
+  color: var(--text-main-color);
+  background-color: var(--input-bg);
+}
+
+.searchBar input::placeholder {
+  color: var(--text-secondary-color);
+  font-size: 90%;
+}
+
+.searchBar input::placeholder::-webkit-input-placeholder {
+  color: var(--text-secondary-color);
+  font-size: 90%;
+}
+
+.searchBar input::placeholder:-ms-input-placeholder {
+  color: var(--text-secondary-color);
+  font-size: 90%;
+}
+
+.searchBar input::placeholder::-moz-placeholder {
+  color: var(--text-secondary-color);
+  font-size: 90%;
+}
+
+.searchBar input::placeholder:-moz-placeholder {
+  color: var(--text-secondary-color);
+  font-size: 90%;
+}
+
+@media (max-width: 991px) {
+  #menuPc {
+    display: none;
+  }
+
+  #menuBurger {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .searchBar {
+    margin-top: 1em;
+  }
+
+  #menuPhone nav {
+    margin-top: 1em;
+  }
+
+  #menuPhone ul {
+    gap: 0;
+  }
+
+  #menuPhone li {
+    border-bottom: 1px solid var(--svg-color-border);
+    padding: 0.5em;
+  }
+
+  #menuPhone li:hover {
+    background-color: var(--svg-color-border);
+    color: var(--text-main-color);
+  }
+
+  .btn-menuBurger button {
+    background-color: var(--header-bg);
+    border: none;
+    padding: 0.2em;
+  }
+
+  .btn-menuBurger svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--svg-color);
+  }
+}

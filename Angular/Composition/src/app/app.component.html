@@ -1,0 +1,18 @@
+<header class="bg-black text-white py-3 px-5">
+  <h1>{{ title }}</h1>
+</header>
+<main class="px-5 py-5 bg-dark text-white">
+  <div class="d-flex flex-wrap gap-5 justify-content-between">
+    <app-film-display
+      *ngFor="let movie of movies"
+      [film]="movie"
+      (filmSelected)="selectedMovie(movie)"
+      class="col-md-3 bg-secondary rounded-3 py-3 px-2"
+    ></app-film-display>
+  </div>
+  <app-film-edit
+    *ngIf="editing"
+    [filmToEdit]="selectedFilm"
+    (editedFilm)="editedMovie($event)"
+  ></app-film-edit>
+</main>

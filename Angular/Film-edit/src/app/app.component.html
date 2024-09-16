@@ -1,0 +1,93 @@
+<header class="py-2 px-5 bg-warning text-primary">
+  <h1>{{ title }}</h1>
+</header>
+<main class="py-2 px-5 bg-light py-4 d-flex justify-content-center">
+  <div id="Film-info" *ngIf="!menuVisible" class="d-flex flex-column gap-2">
+    <h2>Titre : {{ film.titre }}</h2>
+
+    <div>Date de sortie : {{ film.dateSortie }}</div>
+    <div>Durée ( en min ) : {{ film.duree }}</div>
+    <div>genres : {{ film.genre }}</div>
+    <button (click)="openForm()" class="btn btn-warning">
+      Modifier les informations
+    </button>
+  </div>
+  <div
+    id="Film-edit"
+    *ngIf="menuVisible"
+    class="d-flex flex-column gap-2 align-items-center"
+  >
+    <form #editForm="ngForm" (ngSubmit)="saveDatas(editForm)">
+      <input
+        type="text"
+        name="titre"
+        id="titre"
+        placeholder="Nouveau titre"
+        class="form-control mb-2"
+        [(ngModel)]="film.titre"
+        [ngClass]="{
+          'border-danger':
+            editForm.form.dirty &&
+            editForm.form.controls['titre'].touched &&
+            editForm.form.controls['titre'].invalid,
+          'border-success':
+            editForm.form.dirty &&
+            editForm.form.controls['titre'].touched &&
+            editForm.form.controls['titre'].valid
+        }"
+        required
+      />
+      <input
+        type="date"
+        name="dateSortie"
+        id="dateSortie"
+        placeholder="Nouvelle date de sortie"
+        class="form-control mb-2"
+        [(ngModel)]="film.dateSortie"
+        [ngClass]="{
+          'border-danger':
+            editForm.form.dirty &&
+            editForm.form.controls['dateSortie'].touched &&
+            editForm.form.controls['dateSortie'].invalid,
+          'border-success':
+            editForm.form.dirty &&
+            editForm.form.controls['dateSortie'].touched &&
+            editForm.form.controls['dateSortie'].valid
+        }"
+        required
+      />
+      <input
+        type="text"
+        name="duree"
+        id="duree"
+        placeholder="Nouvelle durée"
+        class="form-control mb-2"
+        [(ngModel)]="film.duree"
+        [ngClass]="{
+          'border-danger':
+            editForm.form.dirty &&
+            editForm.form.controls['duree'].touched &&
+            editForm.form.controls['duree'].invalid,
+          'border-success':
+            editForm.form.dirty &&
+            editForm.form.controls['duree'].touched &&
+            editForm.form.controls['duree'].valid
+        }"
+        required
+      />
+      <input
+        type="text"
+        name="genre"
+        id="genre"
+        placeholder="Nouveaux genres"
+        class="form-control mb-2"
+        [(ngModel)]="film.genre"
+        required
+      />
+      <button type="submit" class="btn btn-warning">
+        Enregistrer les modications
+      </button>
+      <button (click)="cancelEdit()" class="btn btn-tertiary">Annuler</button>
+    </form>
+  </div>
+</main>

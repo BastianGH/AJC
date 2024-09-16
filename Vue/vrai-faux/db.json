@@ -1,0 +1,44 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "label": "La France est un pays africain",
+      "correct": false,
+      "comment": "",
+      "level": "Facile",
+      "category": "Géographie"
+    },
+    {
+      "id": 2,
+      "label": "Flaubert a écrit \"Madame Claude\"",
+      "correct": false,
+      "comment": "",
+      "level": "Facile",
+      "category": "Art"
+    },
+    {
+      "id": 3,
+      "label": "Porto est la capitale du Portugal",
+      "correct": false,
+      "comment": "C'est Lisbonne",
+      "level": "Facile",
+      "category": "Géographie"
+    },
+    {
+      "id": 4,
+      "label": "Billy Jean est une chanson de Michael Jackson",
+      "correct": true,
+      "comment": "",
+      "level": "Facile",
+      "category": "Art"
+    },
+    {
+      "id": 5,
+      "label": "La Juventus de Turin est le club de football le plus titré d'Italie",
+      "correct": true,
+      "comment": "",
+      "level": "Moyen",
+      "category": "Sport"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+<html lang="en" >
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Calendrier dynamique</title>
+    <link href="style.css" rel="stylesheet" />
+    <script type="module" src='main.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/date-fns@3.6.0/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/date-fns@3.6.0/locale/fr/cdn.min.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="calendar-header">
+        <div id="month"></div>
+        <div class="d-flex" id="calendar-navigation">
+          <div>
+            <button id="prev-month">&lt;</button>
+          <button id="next-month">&gt;</button>
+          </div>
+          <div>
+            <select id="month-select" ></select>
+          </div>
+        </div>
+      </div>
+      <div id="calendar">
+        <div id="week" class="d-flex">
+          <div class="calendar-cell">L</div>
+          <div class="calendar-cell">M</div>
+          <div class="calendar-cell">M</div>
+          <div class="calendar-cell">J</div>
+          <div class="calendar-cell">V</div>
+          <div class="calendar-cell">S</div>
+          <div class="calendar-cell">D</div>
+        </div>
+        <div id="days" class="d-flex">
+        </div>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>

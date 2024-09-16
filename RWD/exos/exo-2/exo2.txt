@@ -1,0 +1,4 @@
+*** EXO 2 ***
+Réaliser la stylisation complète de la page index.html en vous inspirant de la vidéo suivante:
+https://www.youtube.com/watch?v=2vOMjaFMt58
+La mise en page devra être responsive.

@@ -1,0 +1,28 @@
+<header class="bg-secondary py-2 px-5 text-white">
+  <h1>{{ title }}</h1>
+</header>
+<main class="bg-light py-4 px-5">
+  <table class="table table-striped">
+    <thead>
+      <tr class="table-dark">
+        <th (click)="order('nom')">Nom</th>
+        <th (click)="order('prenom')">Prénom</th>
+        <th (click)="order('email')">E-mail</th>
+        <th (click)="order('dateNaissance')">Date de naissance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let personne of personnes"
+        [ngClass]="{ 'table-primary': isBirthdayToday(personne.dateNaissance) }"
+      >
+        <td (click)="order('nom')">{{ personne.nom }}</td>
+        <td (click)="order('prenom')">{{ personne.prenom }}</td>
+        <td (click)="order('email')">{{ personne.email }}</td>
+        <td (click)="order('dateNaissance')">
+          {{ personne.dateNaissance | date : "dd MMMM yyyy" }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</main>

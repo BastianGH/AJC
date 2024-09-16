@@ -1,0 +1,236 @@
+<header class="d-flex justify-content-between py-2 px-5 align-items-center">
+  <div id="menuPc">
+    <a
+      [routerLink]="['movies']"
+      class="d-flex gap-3 link-offset-2 link-underline link-underline-opacity-0 align-items-center"
+    >
+      <img src="../../../assets/cinemate-logo.png" alt="cinemate-logo" />
+      <h1>Cinemate</h1>
+    </a>
+    <nav class="d-flex">
+      <ul class="list-unstyled listHeader">
+        <li>
+          <a
+            [routerLink]="['movies']"
+            class="link-offset-2 link-underline link-underline-opacity-0"
+            [ngClass]="{ active: currentRoute === '/' }"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            [routerLink]="['movies/popular']"
+            class="link-offset-2 link-underline link-underline-opacity-0"
+            [ngClass]="{ active: currentRoute === '/movies/popular' }"
+            >Popular</a
+          >
+        </li>
+        <li>
+          <a
+            [routerLink]="['movies/top']"
+            class="link-offset-2 link-underline link-underline-opacity-0"
+            [ngClass]="{ active: currentRoute === '/movies/top' }"
+            >Top Rated</a
+          >
+        </li>
+        <li>
+          <a
+            [routerLink]="['movies/upcoming']"
+            class="link-offset-2 link-underline link-underline-opacity-0"
+            [ngClass]="{ active: currentRoute === '/movies/upcoming' }"
+            >Upcoming</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <div class="d-flex align-items-center gap-3">
+      <div class="btn-clarity">
+        <button
+          class="btn btn-secondary btn-outline-light"
+          (click)="changeSVG()"
+        >
+          <svg
+            aria-hidden="true"
+            data-toggle-icon="sun"
+            class="w-4 h-4"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              #test
+              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <div class="searchBar">
+        <div class="img">
+          <svg
+            aria-hidden="true"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </div>
+        <form
+          action=""
+          class="input-group"
+          #searchForm="ngForm"
+          (ngSubmit)="searchQuery(searchForm)"
+        >
+          <input
+            type="text"
+            placeholder="Search..."
+            class="form-control border-dark-subtle"
+            ngModel
+            name="query"
+          />
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="menuBurger" class="w-100">
+    <div class="d-flex justify-content-between w-100">
+      <a
+        [routerLink]="['movies']"
+        class="d-flex gap-3 link-offset-2 link-underline link-underline-opacity-0 align-items-center"
+      >
+        <img src="../../../assets/cinemate-logo.png" alt="cinemate-logo" />
+        <h1>Cinemate</h1>
+      </a>
+      <div class="d-flex align-items-center gap-3">
+        <div class="btn-clarity">
+          <button
+            class="btn btn-secondary btn-outline-light"
+            (click)="changeSVG()"
+          >
+            <svg
+              aria-hidden="true"
+              class="w-4 h-4"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                #test
+                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div class="btn-menuBurger">
+          <button
+            class="btn btn-secondary btn-outline-light"
+            (click)="changeToMobile()"
+          >
+            <svg
+              class="w-6 h-6"
+              aria-hidden="true"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div class="btn-menuBurger">
+          <button
+            class="btn btn-secondary btn-outline-light"
+            (click)="changeToMobile()"
+          >
+            <svg
+              class="w-6 h-6"
+              aria-hidden="true"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="menuPhone" *ngIf="isBurgerOpen">
+      <div class="searchBar">
+        <div class="img">
+          <svg
+            aria-hidden="true"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </div>
+        <form
+          action=""
+          class="input-group"
+          #searchFormMobile="ngForm"
+          (ngSubmit)="searchQuery(searchFormMobile)"
+        >
+          <input
+            type="text"
+            placeholder="Search..."
+            class="form-control border-dark-subtle"
+            ngModel
+            name="query"
+          />
+        </form>
+      </div>
+      <nav class="">
+        <ul class="list-unstyled listHeader d-flex flex-column">
+          <li>
+            <a
+              [routerLink]="['movies']"
+              class="link-offset-2 link-underline link-underline-opacity-0"
+              [ngClass]="{ active: currentRoute === '/' }"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="['movies/popular']"
+              class="link-offset-2 link-underline link-underline-opacity-0"
+              [ngClass]="{ active: currentRoute === '/movies/popular' }"
+              >Popular</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="['movies/top']"
+              class="link-offset-2 link-underline link-underline-opacity-0"
+              [ngClass]="{ active: currentRoute === '/movies/top' }"
+              >Top Rated</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="['movies/upcoming']"
+              class="link-offset-2 link-underline link-underline-opacity-0"
+              [ngClass]="{ active: currentRoute === '/movies/upcoming' }"
+              >Upcoming</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

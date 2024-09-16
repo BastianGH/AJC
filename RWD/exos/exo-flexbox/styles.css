@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  width: 1350px;
+}
+
+.imgRed {
+  display: flex;
+  width: 100%;
+}
+.imgPurple {
+  display: flex;
+  justify-content: space-between;
+}
+
+.imgBlue {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 200px;
+}
+
+.imgYellow {
+  display: flex;
+  justify-content: center;
+}

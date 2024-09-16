@@ -1,0 +1,9 @@
+<div>
+  <h2 *ngIf="this.Films.length">Result for '{{ query }}'</h2>
+  <h2 *ngIf="!this.Films.length">No result found for '{{ query }}'</h2>
+  <div class="containerFilms">
+    <div *ngFor="let film of Films">
+      <app-movie-card [film]="film" />
+    </div>
+  </div>
+</div>

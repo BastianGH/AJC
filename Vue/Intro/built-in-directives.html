@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vuejs - Intro</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <h1>Vuejs - Intro</h1>
+    <div id="app">
+      <img v-bind:src="image.src" v-bind:alt="image.alt" />
+      <hr />
+      <a v-bind:href="link">Google</a>
+      <hr />
+      <p v-text="text"></p>
+      <hr />
+      <p v-html="html"></p>
+    </div>
+    <script>
+      const { createApp } = Vue;
+      createApp({
+        setup() {
+          let image = {
+            src: "https://picsum.photos/200/300",
+            alt: "Picsum picture",
+          };
+          const link = "http://google.com";
+          const text = "Ciao a tutti !";
+          const html = "<strong>Code html</strong>";
+
+          return {
+            image,
+            link,
+            text,
+            html,
+          };
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>
